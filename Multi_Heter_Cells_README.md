@@ -2,6 +2,15 @@
 
 This repository documents the **exact per-cell PHY configurations** used to generate **Fig. 9** in our paper.
 The goal is to ensure **full reproducibility** of the dynamic-traffic evaluation without consuming additional paper space.
+<div align="center" style="position: relative; display: inline-block;">
+  <!-- Main figure (bottom layer) -->
+  <img src="figs/Multi-Cell-TimeSlots-Plot.png" width="800">
+
+  <!-- Legend (top layer), 50% size, top-center -->
+  <img src="figs/Multi-Cell-TimeSlots-Legend.png"
+       width="400"
+       style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%);">
+</div>
 
 ---
 
@@ -130,6 +139,7 @@ As shown in the evaluation (§7), Nexus adapts resource allocations across slots
 This page provides full transparency into the per-slot and per-cell settings underlying the dynamic-traffic results.
 
 If you have questions or want to extend this setup (e.g., FR1 or larger cell counts), feel free to open an issue.
+
 
 
 
