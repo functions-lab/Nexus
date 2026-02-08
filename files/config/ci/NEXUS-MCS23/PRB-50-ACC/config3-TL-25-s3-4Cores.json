@@ -1,0 +1,36 @@
+{
+    "bs_radio_num": 2,
+    "ue_radio_num": 2,
+    "bs_rru_port": 9000,
+    "bs_server_port": 8000,
+    "acc100_addr_1": "18:00.0",
+    "bbdev_id_1": 0,
+    "solution": "s3",
+    "cp_size": 64,
+    "fft_size": 1024,
+    "ofdm_data_num": 600,
+    "demul_block_size": 600,
+    "frame_schedule": [
+        "PPUUUUGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+    ],
+    "ul_mcs": {
+        "mcs_index": 23
+    },
+    "dl_mcs": {
+        "mcs_index": 23
+    },
+    "sample_rate": 122880000.0,
+    "max_frame": 23000,
+    "small_mimo_acc": true,
+    "freq_orthogonal_pilot": false,
+    "group_pilot_sc": false,
+    "beam_block_size": 600,
+    "client_ul_pilot_syms": 2,
+    "core_offset": 56,
+    "exclude_cores": [
+        0
+    ],
+    "worker_thread_num": 4,
+    "socket_thread_num": 1,
+    "dpdk_port_offset": 2
+}

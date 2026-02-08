@@ -1,0 +1,36 @@
+{
+    "bs_radio_num": 2,
+    "ue_radio_num": 2,
+    "bs_rru_port": 9000,
+    "bs_server_port": 8000,
+    "acc100_addr_1": "18:00.0",
+    "bbdev_id_1": 0,
+    "solution": "s1",
+    "cp_size": 64,
+    "fft_size": 1024,
+    "ofdm_data_num": 792,
+    "demul_block_size": 792,
+    "frame_schedule": [
+        "PPUUUUUUUUGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+    ],
+    "ul_mcs": {
+        "mcs_index": 10
+    },
+    "dl_mcs": {
+        "mcs_index": 10
+    },
+    "sample_rate": 122880000.0,
+    "max_frame": 23000,
+    "small_mimo_acc": true,
+    "freq_orthogonal_pilot": false,
+    "group_pilot_sc": false,
+    "beam_block_size": 792,
+    "client_ul_pilot_syms": 2,
+    "core_offset": 56,
+    "exclude_cores": [
+        0
+    ],
+    "worker_thread_num": 3,
+    "socket_thread_num": 1,
+    "dpdk_port_offset": 2
+}

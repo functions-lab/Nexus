@@ -1,0 +1,58 @@
+{
+    /* Simulating FlexRAN traffic load */
+    "bs_radio_num": 1,
+    "ue_radio_num": 1,
+    "cp_size": 256,
+    "fft_size": 4096,
+    "ofdm_data_num": 3136,
+    "bs_rru_port": 9220,
+    "bs_server_port": 8220,
+    "acc100_addr_1" : "18:00.6",
+    "bbdev_id_1": 0,
+    "solution": "s2",
+    /* num_subcarrier (12) * num_rb_group (4) * num_rb_per_group (16) */
+    "demul_block_size": 3136,
+    "frame_schedule": [
+        /* "PUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU" */
+        "PUUUUUUUUUUUUGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+        /* "PPUUUUUUUUUUUUUUUUGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG" */
+        /* "PPPPPPPPPPPPPPPPUUUUUUUUUUUUUUUUGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG" */
+        /* "PPPPUUUUUUUUUUUUUUUUGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG" */
+        /* "PPPPUUUUUGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG" */
+        /* "PGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGUGGGUUUUUUUUUUUUUUUU" */
+        /* 70 symbols to simulate 5 slots in a frame */
+        /* "PUUUUUUGGGGGGG" */
+        /* it's actually 1 slot: 14 OFDM symbols */
+    ],
+    "ul_mcs": {
+        "mcs_index" : 17
+        /* "modulation": "16QAM", */
+        /* "code_rate": 0.333 */
+    },
+
+    "dl_mcs": {
+        "mcs_index" : 17
+        /*"modulation": "16QAM",*/
+        /*"code_rate": 0.333*/
+    },
+
+    /* mu0 = 15 kHz, mu1 = 30 kHz, mu2 = 60 kHz, mu3 = 120 kHz */
+    /* sample_rate = mu * fft_size */
+    /* mu0: 15.36e6, mu1: 30.72e6, mu2: 61.44e6, mu3: 122.88e6 */
+    "sample_rate": 491.52e6,
+    "max_frame": 23000,
+
+    "small_mimo_acc": true,
+    "freq_orthogonal_pilot": false,
+    "group_pilot_sc": false,
+    "beam_block_size": 3136, /* allow bulk computation when group_pilot_sc is disabled */
+    "client_ul_pilot_syms": 2,
+    /* Compute configuration */
+    "core_offset": 56,
+    "exclude_cores": [
+        0
+    ],
+    "worker_thread_num": 3,
+    "socket_thread_num": 1,
+    "dpdk_port_offset": 2
+}

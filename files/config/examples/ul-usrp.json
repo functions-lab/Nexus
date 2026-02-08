@@ -1,0 +1,72 @@
+{
+    "serial_file": "files/topology/bs-usrp-addr.json",
+    "cells": 1,
+    "channel": "A",
+    "frequency": 3e9,
+    "single_gain": true,
+    "rx_gain_a": 15,
+    "tx_gain_a": 15,
+    "rx_gain_b": 15,
+    "tx_gain_b": 15,
+    "sample_rate": 100e6,
+    "cp_size": 32,
+    "fft_size": 1024,
+    "ofdm_data_num": 768,
+    "demul_block_size": 768,
+    "beam_block_size": 768,
+    "ul_mcs": {
+        "modulation": "16QAM",
+        "code_rate": 0.333,
+        "decoderIter": 5
+    },
+    "dl_mcs" : {
+        "modulation": "16QAM",
+        "code_rate": 0.333,
+        "decoderIter": 5
+    },
+    "ofdm_tx_zero_prefix": 160,
+    "ofdm_tx_zero_postfix": 160,
+    "ofdm_rx_zero_prefix_bs": 160,
+    "frame_schedule": [
+        "BGGPUUUUGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+        /* "BGGPUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG" */
+    ],
+    "client_ul_pilot_syms": 2,
+    "beacon_antenna" : 0,
+    "beamsweep": false,
+    /* UE configuration */
+    "ue_resync_period": 1000,
+    "ue_channel": "A",
+    "ue_rx_gain_a": [
+        20
+    ],
+    "ue_tx_gain_a": [
+        20
+    ],
+    "ue_rx_gain_b": [
+        20
+    ],
+    "ue_tx_gain_b": [
+        20
+    ],
+    "tx_advance": [
+        100
+    ],
+    "ue_hw_framer": false,
+    "hw_framer": false,
+    /* Compute configuration */
+    "exclude_cores": [
+        0
+    ],
+    "small_mimo_acc": true,
+    /* UE (User) */
+    "ue_core_offset": 40,
+    "ue_worker_thread_num": 4,
+    "ue_socket_thread_num": 1,
+    /* BS (Agora) */
+    "core_offset": 1,
+    "worker_thread_num": 1,
+    "socket_thread_num": 1,
+    "max_frame": 10000,
+    "corr_scale": [10]
+ }
